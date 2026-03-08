@@ -12,14 +12,22 @@ module Sastrawi
           end
 
           def visit(context)
-            result = nil
+            first_result = nil
+            dict_result = nil
 
             @disambiguators.each do |disambiguator|
               result = disambiguator.disambiguate(context.current_word)
+              next if result.nil?
 
-              break if context.dictionary.contains?(result)
+              first_result ||= result
+
+              if context.dictionary.contains?(result)
+                dict_result = result
+                break
+              end
             end
 
+            result = dict_result || first_result
             return if result.nil?
 
             removed_part = context.current_word.sub(/#{Regexp.quote(result)}/, '')

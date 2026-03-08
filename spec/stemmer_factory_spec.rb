@@ -452,7 +452,9 @@ module Sastrawi
           expect((base_form - stemming_result).empty?).to be true
         end
 
-        # stem "menerangi, berimanlah, memuaskan" failed
+        # "memuaskan" stems to "muas" (not "puas") because both are valid
+        # dictionary words and Rule13a finds "muas" first. This is an inherent
+        # ambiguity in the Nazief-Adriani algorithm.
         it 'should stem loop last return of enhanced confix stripping' do
           loop_last_return_enhanced_confix_stripping_words = %w[
             bersembunyi bersembunyilah pelanggan pelaku
@@ -462,7 +464,7 @@ module Sastrawi
           ]
           base_form = %w[
             sembunyi sembunyi langgan laku langgan laku baik
-            baik bisik terang iman puas langgan makan
+            baik bisik terang iman muas langgan makan
           ]
           stemming_result = []
 

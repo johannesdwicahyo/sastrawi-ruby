@@ -68,11 +68,37 @@ module Sastrawi
           # try to remove prefix before suffix if the specification is met
 
           if cs_precendence_adjustment_specification.satisfied_by?(@original_word)
-            remove_prefixes
-            return if @dictionary.contains?(@current_word)
+            # Interleave prefix and suffix removal in CS path:
+            # After each prefix removal round, try suffix removal to check
+            # if the combination yields a dictionary word.
+            cs_found = false
+            3.times do
+              prev_removals_len = @removals.length
+              accept_prefix_visitors(@prefix_visitors)
 
-            remove_suffixes
-            if @dictionary.contains?(@current_word)
+              break if @removals.length == prev_removals_len # no prefix removed
+
+              if @dictionary.contains?(@current_word)
+                cs_found = true
+                break
+              end
+
+              # Try suffix removal from this intermediate state
+              saved_word = @current_word
+              saved_removals = @removals.dup
+              remove_suffixes
+
+              if @dictionary.contains?(@current_word)
+                cs_found = true
+                break
+              end
+
+              # Suffix didn't help, restore and try more prefix iterations
+              @current_word = saved_word
+              @removals = saved_removals
+            end
+
+            if cs_found
               return
             else
               @current_word = @original_word
