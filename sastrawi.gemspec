@@ -3,17 +3,25 @@
 require_relative "lib/sastrawi/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "sastrawi"
+  spec.name          = "sastrawi-ruby"
   spec.version       = Sastrawi::VERSION
   spec.required_ruby_version = ">= 3.0.0"
-  spec.authors       = ["Andrias Meisyal", "Johannes Dwi Cahyo"]
-  spec.email         = ["andriasonline@gmail.com"]
+  spec.authors       = ["Johannes Dwi Cahyo"]
+  spec.email         = ["csk.rage@gmail.com"]
 
   spec.summary       = "Indonesian language stemmer for Ruby"
-  spec.description   = "A Ruby library for stemming words in Bahasa Indonesia (Indonesian). " \
-                        "Based on the Nazief & Adriani algorithm with Enhanced Confix Stripping."
+  spec.description   = "A maintained fork of the sastrawi gem. Stems words in Bahasa Indonesia " \
+                        "using the Nazief & Adriani algorithm with Enhanced Confix Stripping. " \
+                        "Based on the original work by Andrias Meisyal (sastrawi gem) and the " \
+                        "PHP Sastrawi project (github.com/sastrawi/sastrawi)."
   spec.homepage      = "https://github.com/johannesdwicahyo/sastrawi-ruby"
   spec.license       = "MIT"
+
+  spec.metadata      = {
+    "source_code_uri" => "https://github.com/johannesdwicahyo/sastrawi-ruby",
+    "changelog_uri" => "https://github.com/johannesdwicahyo/sastrawi-ruby/blob/master/README.md",
+    "upstream_uri" => "https://github.com/meisyal/sastrawi-ruby"
+  }
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "bin"
