@@ -24,6 +24,8 @@ module Sastrawi
       def stem(text)
         normalized_text = Sastrawi::Stemmer::Filter::TextNormalizer.normalize_text(text)
 
+        return "" if normalized_text.empty?
+
         words = normalized_text.split(' ')
         stems = []
 

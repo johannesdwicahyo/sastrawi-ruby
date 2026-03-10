@@ -1,12 +1,21 @@
+# frozen_string_literal: true
+
+require 'set'
+
 module Sastrawi
   module Dictionary
     class ArrayDictionary
-      attr_reader :words
-
       def initialize(words = [])
-        @words = []
+        @words = Set.new
 
         add_words(words)
+      end
+
+      ##
+      # Return the words as an Array (for backward compatibility)
+
+      def words
+        @words.to_a
       end
 
       ##
@@ -20,7 +29,7 @@ module Sastrawi
       # Count how many words in the dictionary
 
       def count
-        @words.length
+        @words.size
       end
 
       ##
@@ -36,9 +45,13 @@ module Sastrawi
       # Add a word to the dictionary
 
       def add(word)
-        return if word.nil? || word.strip == ''
+        unless word.is_a?(String)
+          raise ArgumentError, "dictionary entries must be strings, got #{word.class}"
+        end
 
-        @words.push(word)
+        return if word.strip == ''
+
+        @words.add(word)
       end
 
       ##

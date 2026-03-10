@@ -205,11 +205,7 @@ module Sastrawi
             end
           end
 
-          @removals.each do |removal|
-            if removal.affix_type == 'DP'
-              @removals.delete(removal)
-            end
-          end
+          @removals = @removals.reject { |removal| removal.affix_type == 'DP' }
         end
       end
     end

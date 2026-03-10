@@ -11,6 +11,8 @@ module Sastrawi
       # Remove stop words
 
       def remove(text)
+        return "" if text.nil? || text.empty?
+
         words = text.split(' ')
         stop_words = []
 
