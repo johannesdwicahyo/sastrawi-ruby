@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sastrawi/stemmer/context/visitor/dont_stem_short_word'
 require 'sastrawi/stemmer/context/visitor/remove_inflectional_particle'
 require 'sastrawi/stemmer/context/visitor/remove_inflectional_possessive_pronoun'

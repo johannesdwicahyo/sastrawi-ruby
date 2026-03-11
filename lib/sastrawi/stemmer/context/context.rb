@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sastrawi/stemmer/confix_stripping/precedence_adjustment_specification'
 
 ##

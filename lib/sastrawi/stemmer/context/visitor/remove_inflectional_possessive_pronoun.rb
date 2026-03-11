@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Remove inflectional possessive pronoun
 # Asian J. (2007) "Effective Techniques for Indonesia Text Retrieval" page 60

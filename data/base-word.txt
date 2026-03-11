@@ -3653,6 +3653,7 @@ bramacorah
 brambang
 brana
 brander
+branding
 brankar
 brankas
 branwir
@@ -5043,6 +5044,7 @@ darat
 darau
 dargah
 dari
+daring
 daripada
 darji
 darma
@@ -5822,6 +5824,7 @@ diri
 dirigen
 diris
 dirus
+disabilitas
 disagio
 disain
 disainer
@@ -10189,6 +10192,7 @@ infleksibel
 infleksif
 infloresen
 infloresens
+influencer
 influensa
 influenza
 info
@@ -10238,6 +10242,7 @@ inkaso
 inklaring
 inklinasi
 inklinometer
+inklusi
 inklusif
 inkognito
 inkompabilitas
@@ -10381,6 +10386,7 @@ internalisasi
 internasional
 internasionalisasi
 internat
+internet
 internir
 internis
 internuntius
@@ -16157,6 +16163,7 @@ litah
 litak
 litani
 liter
+literasi
 literator
 literer
 litium
@@ -16462,6 +16469,7 @@ lupus
 luput
 lurah
 lurik
+luring
 luru
 lurub
 luruh
@@ -17043,6 +17051,7 @@ markado
 markah
 markas
 markasit
+marketing
 marketri
 markis
 markisa
@@ -18160,7 +18169,6 @@ muamalat
 muanas
 muara
 muarikh
-muas
 muasasah
 muasir
 muat
@@ -19330,6 +19338,7 @@ ongol-ongol
 oniks
 onkogen
 onkologi
+online
 onomasiologi
 onomastika
 onomatologi
@@ -21416,6 +21425,7 @@ poces
 poci
 pocok
 pocong
+podcast
 podemporem
 podikal
 podium
@@ -25873,6 +25883,7 @@ slintat-slintut
 slip
 slof
 slogan
+smartphone
 smes
 smokel
 snob
@@ -26182,6 +26193,7 @@ stapler
 staples
 start
 starter
+startup
 stasi
 stasioner
 stasis
@@ -26288,6 +26300,7 @@ stratopouse
 stratosfer
 stratum
 stratus
+streaming
 streng
 streptokokus
 streptomisin
@@ -26311,6 +26324,7 @@ studen
 studi
 studio
 stuko
+stunting
 stupa
 sua
 suah
@@ -29576,6 +29590,7 @@ wayang
 wayuh
 wazari
 wazir
+webinar
 weda
 wedam
 wedana
@@ -29668,6 +29683,7 @@ wirang
 wiraniaga
 wirasuara
 wiraswasta
+wirausaha
 wirid
 wiru
 wisa

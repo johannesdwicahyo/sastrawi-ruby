@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sastrawi/stemmer/context/context'
 
 require 'sastrawi/stemmer/context/visitor/visitor_provider'
@@ -83,6 +85,12 @@ module Sastrawi
         end
 
         if root_first_word == root_second_word
+          root_first_word
+        elsif @dictionary.contains?(root_second_word)
+          # Handle partial/rhyming reduplication (bolak-balik, sayur-mayur, lauk-pauk)
+          # Prefer the second word's stem when it's a dictionary word
+          root_second_word
+        elsif @dictionary.contains?(root_first_word)
           root_first_word
         else
           word

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 module Sastrawi
@@ -452,9 +454,7 @@ module Sastrawi
           expect((base_form - stemming_result).empty?).to be true
         end
 
-        # "memuaskan" stems to "muas" (not "puas") because both are valid
-        # dictionary words and Rule13a finds "muas" first. This is an inherent
-        # ambiguity in the Nazief-Adriani algorithm.
+        # "memuaskan" now stems to "puas" after removing archaic "muas" from dictionary
         it 'should stem loop last return of enhanced confix stripping' do
           loop_last_return_enhanced_confix_stripping_words = %w[
             bersembunyi bersembunyilah pelanggan pelaku
@@ -464,7 +464,7 @@ module Sastrawi
           ]
           base_form = %w[
             sembunyi sembunyi langgan laku langgan laku baik
-            baik bisik terang iman muas langgan makan
+            baik bisik terang iman puas langgan makan
           ]
           stemming_result = []
 
@@ -504,7 +504,7 @@ module Sastrawi
 
         it 'should stem plural words' do
           plural_words = %w[buku-buku berbalas-balasan bolak-balik]
-          base_form = %w[buku balas bolak-balik]
+          base_form = %w[buku balas balik]
           stemming_result = []
 
           plural_words.each do |word|

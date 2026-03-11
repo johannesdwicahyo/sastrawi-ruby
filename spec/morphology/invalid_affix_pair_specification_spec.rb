@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 require 'sastrawi/morphology/invalid_affix_pair_specification'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Confix Stripping Rule Precendence Adjustment Specification
 # Asian J. (2007) "Effective Techniques for Indonesian Text Retrieval" page 78-79

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Remove plain prefix
 # Asian J. (2007) "Effective Techniques for Indonesian Text Retrieval" page 61

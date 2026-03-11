@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sastrawi/stemmer/filter/text_normalizer'
 
 module Sastrawi

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sastrawi/dictionary/array_dictionary'
 
 require 'sastrawi/stemmer/cached_stemmer'

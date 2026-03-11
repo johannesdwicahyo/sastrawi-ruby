@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 require 'sastrawi/stop_word_remover/stop_word_remover'
